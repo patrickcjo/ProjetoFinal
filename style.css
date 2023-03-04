@@ -63,9 +63,9 @@ span {
 .container-conteudo {
   display: grid;
   width: 100%;
-  max-width: 1270px;
+  /* max-width: 100%; */
   margin: 70px auto;
-  padding: 0 2rem;
+  padding: 0;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
 }
@@ -96,18 +96,13 @@ span {
 }
 @media screen and (max-width: 750px) {
   .container {
-    height: 150px;
+    height: 0px;
   }
-}
-@media screen and (max-width: 750px) {
-  .container {
-    height: 150px;
-  }
-
   .container-menu {
     flex-direction: column;
   }
 }
+
 @media screen and (max-width: 850px) {
   .container-conteudo {
     display: grid;
@@ -159,8 +154,7 @@ span {
       font-size: 0.8rem;
     }
     .container-menu {
-      
-      padding-bottom: 100¨;
+      padding-bottom: 10px;
     }
     .container {
       display: block;

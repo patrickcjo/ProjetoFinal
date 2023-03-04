@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #edeef7;
+  box-sizing: border-box;
+  font-family: "Raleway";
+}
+
+.container {
+  height: 80px;
+  width: 100%;
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08);
+  background-color: white;
+}
+
+.container-menu {
+  display: flex;
+  font-family: "Raleway";
+  background-color: rgb(202, 202, 202);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 16px;
+}
+
+.link-logo {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 16px;
+  color: rgb(70, 24, 24);
+  cursor: pointer;
+}
+.container-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.links {
+  font-weight: bold;
+  text-decoration: none;
+  padding: 16px;
+  color: rgb(70, 24, 24);
+  font-size: 1.125rem;
+}
+.links a {
+  padding: 0 16px;
+}
+.container-conteudo {
+  display: block;
+  width: 95%;
+  margin: 20px;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+@media screen and (max-width: 750px) {
+  .container {
+    height: 0px;
+  }
+  .container-menu {
+    flex-direction: column;
+  }
+  .container-conteudo {
+    display: block;
+    margin: 20px;
+    width: 85%;
+  }
+  
+}
+
+@media screen and (max-width: 1060px) {
+  .container-conteudo {
+    display: block;
+    margin: 20px;
+    width: 93%;
+  }
+ 
+}
+@media screen and (max-width: 414px) {
+   .container-menu a {
+    font-size: 0.8rem;
+    padding-bottom: 10px;
+  }
+h1{
+  font-size: 1.3rem;
+}
+}

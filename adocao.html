@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="adocao.css" />
+    <title>ProjetoFINAL - BLOG</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="container-menu">
+        <div class="titulo">
+          <a href="projeto.html" class="link-logo">Apaixonados por Felinos</a>
+        </div>
+        <div class="container-links">
+          <a href="contatos.html" class="links">Contatos</a>
+          <a href="adocao.html" class="links">Adoção</a>
+          <!-- <a href="#" class="links">Sobre</a> -->
+        </div>
+      </div>
+      <div class="container-conteudo">
+        <h1 class="formadocao">Formulário de Adoção</h1>
+        <form
+          action="https://getform.io/f/30232606-b836-4c17-adcb-87233f67df03"
+          class="formulario"
+          method="post">
+          <fieldset class="fldados">
+            <label for="nome">Digite seu nome para adoção: </label>
+            <input
+              required
+              type="text"
+              name="nome"
+              id="nome"
+              placeholder="Digite seu nome"
+              minlength="4"
+              maxlength="120" />
+            <label for="end"></label>
+            <input
+              type="text"
+              name="end"
+              id="end"
+              placeholder="Digite Seu endereço"
+              minlength="4"
+              maxlength="120" />
+            <label for="dtnascimento">Data de nascimento: </label>
+            <input
+              type="date"
+              name="dtnascimento"
+              id="dtnascimento"
+              value="data de nascimento"
+              required />
+            <input
+              type="number"
+              class="telefone"
+              placeholder="Digite seu telefone"
+              required
+              minlength="10"
+              maxlength="20" />
+            <div class="dvradio">
+              <label for="filhos">Voce possui filhos?</label>
+              <input type="radio" class="filhos" name="filhos" id="filhos" />Sim
+              <input type="radio" class="filhos" name="filhos" id="filhos" />Não
+            </div>
+            <p>Selecione o Gato que deseja adotar:</p>
+            <select name="tpgatos" id="">
+              <option value="CL">Chocolate</option>
+              <option value="VL">Vira Lata</option>
+              <option value="CZ">Cinzento</option>
+              <option value="EG">Egypsio</option>
+            </select>
+            <input type="submit" value="Enviar" class="form-enviar" />
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
