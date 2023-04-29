@@ -4,14 +4,6 @@
   box-sizing: border-box;
   font-familly: "Poppins", sans-serif;
 }
-/* body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #43345d;
-  min-height: 800px;
-} */
-
 .container-gatos {
   position: relative;
   width: 100%;
