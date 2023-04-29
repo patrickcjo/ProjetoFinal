@@ -1,63 +1,39 @@
-const instagramGrid = document.querySelector("#gato-grid");
-// const instagramBackdrop = document.querySelector("#gato-card");
-const divCard = document.querySelector("#gato-card");
+const gatoGrid = document.querySelector("#gato-grid");
 
-
-const instagramModalImage = document.querySelector("#gato-modal-image");
-const instagramModalTitle = document.querySelector("#gato-modal-title");
-const instagramModalText = document.querySelector("#gato-modal-text");
-
-// const instagramModalCloseButton = document.querySelector(
-//   "#instagram-modal-close-button"
-// );
-// const instagramModalDeleteButton = document.querySelector(
-//   "#instagram-modal-delete-button"
-// );
-
-// instagramModalCloseButton.onclick = () => {
-//   instagramBackdrop.className = "instagram-backdrop";
-// };
-
-async function loadInstagramImages() {
+  async function loadgatoImages() {
   const response = await fetch("/JSON/gatos.json");
-  const instagramImages = await response.json();
+  const gatoImages = await response.json();
 
-  instagramImages.forEach((cat) => {
-    // let divCard = document.createElement("div");
-    // divCard.className = "gato-card";
+  gatoImages.forEach((cat) => {
+    
+    const divCard0 = document.createElement("div");
+    divCard0.className = "card";
 
-    let divImage = document.createElement("div");
-    divImage.className = "image";
+    const divModalImage0 = document.createElement("div");
+    divModalImage0.className = "gato-modal-image";
 
-    let divContet = document.createElement("div");
-    divContet.class = "content";
+    const divContent = document.createElement("div");
+    divContent.className = "content";
 
-    let instagramImage = document.createElement("img");
-    instagramImage.src = cat.thumbnail;
-    // instagramImage.className = "image";
+    let gatoImage = document.createElement("img");
+    gatoImage.src = cat.thumbnail;
+    gatoImage.className = "image";
 
-    instagramModalTitle.innerHTML = cat.title;
-    instagramModalText.innerHTML = cat.text;
+   
+    const gatoModalTitle0 = document.createElement("h3");
+    const gatoModalText0 = document.createElement("p");
+      
+ gatoModalTitle0.innerHTML = cat.title;
+ gatoModalText0.innerHTML = cat.text;
 
-    // instagramImage.onclick = () => {
-    //   instagramBackdrop.className = "instagram-backdrop open";
-    //   instagramModalImage.src = cat.thumbnail;
-    //   instagramModalTitle.innerHTML = cat.title;
-    //   instagramModalText.innerHTML = cat.text;
+    divContent.appendChild(gatoModalTitle0);
+    divContent.appendChild(gatoModalText0);
 
-    //   instagramModalDeleteButton.onclick = () => {
-    //     instagramBackdrop.className = "instagram-backdrop";
-    //     instagramGrid.removeChild(instagramImage);
-    //   }
-    // };
-
-    divContet.appendChild(instagramModalTitle);
-    divContet.appendChild(instagramModalText);
-
-    divImage.appendChild(instagramImage);
-    divCard.appendChild(divImage);
-    // instagramGrid.appendChild(divCard);
+    divModalImage0.appendChild(gatoImage);
+    divCard0.appendChild(divModalImage0);
+    divCard0.appendChild(divContent);
+    gatoGrid.appendChild(divCard0);
   });
 }
 
-loadInstagramImages();
+loadgatoImages();

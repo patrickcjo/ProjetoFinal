@@ -7,15 +7,18 @@ body {
   box-sizing: border-box;
   font-family: "Raleway";
 }
-img {
+/* img {
   width: 100%;
   max-width: 100%;
   border-radius: 8px;
-}
+} */
+
 span {
   font-size: 3rem;
   font-weight: bold;
 }
+
+
 .container {
   height: 80px;
   width: 100%;
