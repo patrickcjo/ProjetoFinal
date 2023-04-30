@@ -19,7 +19,6 @@
           <a href="/HTML/gatosdisponiveis.html" class="links"
             >Gatos Disponíveis</a
           >
-          <!-- <a href="#" class="links">Sobre</a> -->
         </div>
       </div>
       <div class="container-conteudo">
@@ -66,13 +65,10 @@
               <input type="radio" class="filhos" name="filhos" id="filhos" />Não
             </div>
             <p>Selecione o Gato que deseja adotar:</p>
-            <select name="tpgatos" id="gatos-name">
+            <select name="tpgatos" id="gatos-name" onchange="opcao()">
               <option value="">Selecione um Gato</option>
-              <!-- <option value="CL">Chocolate</option>
-              <option value="VL">Vira Lata</option>
-              <option value="CZ">Cinzento</option>
-              <option value="EG">Egypsio</option> -->
             </select>
+            <p id="gatoSelecionado"></p>
             <input type="submit" value="Enviar" class="form-enviar" />
           </fieldset>
         </form>

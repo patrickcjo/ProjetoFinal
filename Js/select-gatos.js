@@ -4,18 +4,25 @@ async function Loadgatos() {
   const select = document.getElementById("gatos-name");
   const response = await fetch("/JSON/gatos.json");
   const data = await response.json();
-  // try {
-  //   // Carrega o arquivo JSON
 
-  //   // Itera sobre os objetos do arquivo JSON
   data.forEach((gato) => {
-    // Cria uma nova opção no <select> para cada objeto
     const option = document.createElement("option");
     option.value = gato.nome;
     option.text = gato.title;
     select.appendChild(option);
   });
 }
+function opcao() {
+  let gatoSelect = document.getElementById("gatos-name");
+  let gato = gatoSelect.options[gatoSelect.selectedIndex].text;
 
-// Chama a função assíncrona para carregar os gatos
+  let gatoParagrafo = document.getElementById("gatoSelecionado");
+  gatoParagrafo.innerHTML = `Voce Selecionou ${gato}`;
+  if (gato.substr(gato.length - 1) === "a") {
+    gatoParagrafo.style.color = "blue";
+  } else {
+    gatoParagrafo.style.color = "red";
+  }
+}
+
 Loadgatos();

@@ -1,4 +1,4 @@
-const gatoGrid = document.querySelector("#gato-grid");
+  const gatoGrid = document.querySelector("#gato-grid");
 
   async function loadgatoImages() {
   const response = await fetch("/JSON/gatos.json");
@@ -23,8 +23,8 @@ const gatoGrid = document.querySelector("#gato-grid");
     const gatoModalTitle0 = document.createElement("h3");
     const gatoModalText0 = document.createElement("p");
       
- gatoModalTitle0.innerHTML = cat.title;
- gatoModalText0.innerHTML = cat.text;
+    gatoModalTitle0.innerHTML = cat.title;
+    gatoModalText0.innerHTML = cat.text;
 
     divContent.appendChild(gatoModalTitle0);
     divContent.appendChild(gatoModalText0);
